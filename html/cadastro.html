@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head> 
+    <title> Cadastro - Nome da ONG </title>
+    <link rel="stylesheet" href="C:\VS codes\Projeto original\style\style.css">
+    <script src="C:\VS codes\Projeto original\js\renderizar.js" defer></script>
+  </head>
+
+  <body>
+
+  <div class="js-conteudo">
+  
+  <header> 
+    <div>
+      <h1> Cadastro </h1>
+      <img src="C:\VS codes\Projeto html\images\logo.png" alt="Logo da ONG">
+    </div>
+
+    <input type="checkbox" id="menu-toggle"> 
+    <label for="menu-toggle" class="menu-hamburguer"> ☰ </label>
+
+    <nav>
+      <a class="js-nav" href="#index">Página inicial</a>
+      <a class="js-nav" href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+
+    <form novalidate>
+      <fieldset>
+        <legend> Informações necessárias </legend>
+          <label for="nome">Nome Completo: <span class="badge">Obrigatório</span></label>
+          <input class="formulario-texto" type="text" id="nome" name="nome" required>
+
+          <label for="email">E-mail: <span class="badge">Obrigatório</span></label>
+          <input class="formulario-texto" type="email" id="email" name="email" required>
+
+          <label for="idade">Idade: <span class="badge">Obrigatório</span></label>
+          <input class="formulario-texto" type="number" id="idade" name="idade" min="18" max="120" required>
+
+          <label for="telefone">Telefone:</label>
+          <input class="formulario-texto" type="tel" id="telefone" name="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}">
+
+          <label for="endereco">Endereço:</label>
+          <input class="formulario-texto" type="text" id="endereco" name="endereco">
+      </fieldset>
+
+      <fieldset>
+        
+        <legend> Como deseja ajudar? </legend>
+
+        <div class="formulario-checkbox">
+          <input type="checkbox" id="voluntario" name="voluntario" value="voluntario"/>
+    <label for="voluntario">Voluntariando</label>
+        </div>
+      
+
+          <input type="checkbox" id="doacao" name="doacao" value="doacao"/>
+          <label for="doacao">Doando</label>
+        </div>
+      
+
+      </fieldset>
+
+      <div class="buttonandalert">
+        <button class="button" id="modalbutton" type="submit">Enviar</button>
+
+        <div class="alert">
+        <span class="alertbutton" onclick="this.parentElement.style.display='none';">&times;</span>
+        <spam class="symbol"> ⚠︎ </spam> Preencha corretamente todos os campos obrigatórios.
+        </div>
+      </div>
+      
+    </form>
+
+    <div id="myModal" class="modal">
+
+      <div class="modalcontent">
+      <p>Deseja confirmar o envio das informações?</p>
+
+        <div class="modalbuttons">
+          <span class="close">Cancelar</span> 
+          <button class="submitbutton" id="submitbutton" type="button">Confirmar</button>
+        </div>
+
+    </div>
+
+    <div id="toast"> <spam class="symbol"> ✓ </spam> Cadastro concluído com sucesso.</div>
+
+    </div>
+
+</div>
+  
+  <footer>
+
+    <p> Informações de contato </p>
+     <ul>
+      <li> E-mail: exemplo@gmail.com </li>
+      <li> Telefone: (00) 00000-0000 </li>
+      <li> Endereço: Endereço exemplo </li>
+     </ul>
+    
+  </footer>
+
+  </body>
+  
+</html>

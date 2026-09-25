@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head> 
+    <title> Título da página inicial </title>
+
+    <link rel="stylesheet" href="..\style\style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="\js\dados.js" defer></script>
+    <script src="\js\roteador.js" defer></script>
+    <script src="\js\formulario.js" defer></script>
+  </head>
+
+  <body>
+
+  <header class="js-header"> 
+
+    <template id="template-header">
+      <div>
+        <h1 class="js-titulo"></h1>
+        <img src="../images/logo.png" alt="Logo da ONG">
+      </div>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-hamburguer">☰</label>
+
+      <nav class="js-links"></nav>
+    </template>
+
+    </header>
+
+  <div class="js-conteudo">
+  </div>
+
+  <footer>
+
+    <p> Informações de contato </p>
+     <ul>
+      <li> E-mail: exemplo@gmail.com </li>
+      <li> Telefone: (00) 00000-0000 </li>
+      <li> Endereço: Endereço exemplo </li>
+     </ul>
+    
+  </footer>
+
+  </body>
+  
+</html>
