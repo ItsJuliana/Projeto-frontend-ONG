@@ -165,9 +165,9 @@ const rotas = {
       <div class="buttonandalert">
         <button class="button" id="modalbutton" type="submit">Enviar</button>
 
-        <div class="alert" style="display:none;">
-        <span class="alertbutton" onclick="this.parentElement.style.display='none';">&times;</span>
-        <spam class="symbol"> ⚠︎ </spam> Preencha corretamente todos os campos obrigatórios.
+        <div class="alert" style="display:none;" role="alert">
+          <span class="symbol"> ⚠︎ </span> Preencha corretamente todos os campos obrigatórios.
+          <button aria-label="Fechar alerta" type="button" class="alertbutton" onclick="this.parentElement.style.display='none';">&times;</button>
         </div>
       </div>
       
@@ -181,7 +181,7 @@ const rotas = {
       <p>Deseja confirmar o envio das informações?</p>
 
         <div class="modalbuttons">
-          <span class="close">Cancelar</span> 
+          <button class="close">Cancelar</button> 
           <button class="submitbutton" id="submitbutton" type="button">Confirmar</button>
         </div>
 
@@ -215,7 +215,24 @@ function renderizar() {
 
     const conteudoEncontrado = rotas[rota];
 
-    const erroCarregamento = `<main>
+    const erroCarregamento = `<header> 
+      <div>
+        <h1>Página não encontrada</h1>
+        <img src="../images/logo.png" alt="Logo da ONG">
+      </div>
+
+      <input type="checkbox" id="menu-toggle" aria-label="Abrir menu de navegação">
+      <label for="menu-toggle" class="menu-hamburguer">☰</label>
+
+      <nav>
+        <a href="#index">Página inicial</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#cadastro">Cadastro</a>
+      </nav>
+
+    </header>
+    
+    <main>
       <p class="pagina-erro"> Página não encontrada. <p> 
     </main>`
 

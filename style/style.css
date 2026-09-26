@@ -239,6 +239,9 @@ fieldset .formulario-checkbox {
 }
 
 .alertbutton {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-texto);
+    border: 0px;
     cursor: pointer;
     margin-left: 15px;
     font-weight: bold;
