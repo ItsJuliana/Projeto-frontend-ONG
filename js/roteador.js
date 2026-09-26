@@ -215,25 +215,7 @@ function renderizar() {
 
     const conteudoEncontrado = rotas[rota];
 
-    const erroCarregamento = `<header> 
-    <div>
-      <h1> Nome da ONG </h1>
-      <img src="/images/logo.png" alt="Logo da ONG">
-    </div>
-
-    <input type="checkbox" id="menu-toggle"> 
-    <label for="menu-toggle" class="menu-hamburguer"> ☰ </label>
-
-
-    <nav>
-      <a class="js-nav" href="#index">Página inicial</a>
-      <a class="js-nav" href="#sobre">Sobre</a>
-      <a class="js-nav" href="#cadastro">Cadastro</a>
-    </nav>
-
-    </header>
-    
-    <main>
+    const erroCarregamento = `<main>
       <p class="pagina-erro"> Página não encontrada. <p> 
     </main>`
 
