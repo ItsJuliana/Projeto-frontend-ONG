@@ -26,7 +26,7 @@
 
 .darkmode {
     --cor-primaria: #A43A00;
-    --cor-secundaria: #af6900;
+    --cor-secundaria: #ca7900;
     --cor-terciaria: #8d5500;
     --cor-texto: #FFE499;
     --cor-texto-secundaria: #fff8e4;
@@ -83,6 +83,47 @@ header a {
 header a:hover {
     color: var(--cor-secundaria);
     transform: translateY(-2px);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: var(--espacamento-pequeno);
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-switch:hover {
+    background-color: var(--cor-texto);
+    transform: translateY(-2px);
+}
+
+#theme-switch svg {
+    fill: var(--cor-texto);
+}
+
+#theme-switch svg:hover {
+    fill: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
 
 main {
