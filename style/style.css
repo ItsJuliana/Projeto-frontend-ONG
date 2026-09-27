@@ -24,6 +24,19 @@
     --box-shadow: 0 2px 10px rgba(78, 42, 9, 0.3);
 }
 
+.darkmode {
+    --cor-primaria: #A43A00;
+    --cor-secundaria: #ca7900;
+    --cor-terciaria: #8d5500;
+    --cor-texto: #FFE499;
+    --cor-texto-secundaria: #fff8e4;
+    --cor-fundo: #1C120A;
+    --cor-cards: #3F2B19;
+    --cor-sucesso: #248820;
+    --cor-aviso: #E0DD3F;
+    --cor-erro: #CF2525;
+}
+
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
@@ -70,6 +83,47 @@ header a {
 header a:hover {
     color: var(--cor-secundaria);
     transform: translateY(-2px);
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    margin: var(--espacamento-pequeno);
+    border-radius: 50%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-switch:hover {
+    background-color: var(--cor-texto);
+    transform: translateY(-2px);
+}
+
+#theme-switch svg {
+    fill: var(--cor-texto);
+}
+
+#theme-switch svg:hover {
+    fill: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
 }
 
 main {
@@ -239,6 +293,9 @@ fieldset .formulario-checkbox {
 }
 
 .alertbutton {
+    color: var(--cor-secundaria);
+    background-color: var(--cor-texto);
+    border: 0px;
     cursor: pointer;
     margin-left: 15px;
     font-weight: bold;
